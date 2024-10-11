@@ -86,7 +86,7 @@ df_tag_id_mapping = df_with_tag_ids.join(
 ).groupBy("course_name", "instructor", "new_price", "old_price", "number_of_students", "rating", "sections", "lectures", "total_duration_hours", "what_you_learn") \
     .agg(F.collect_list("tag_id").alias("tag_ids"))
 
-# Bước 7: Thêm instructor_id vào bảng course
+# Bước 7: Thêm instructor_id vào bảng 
 instructors_df = df_cleaned.select("instructor").distinct().withColumnRenamed("instructor", "instructor_name")
 instructors_df.write.jdbc(
     url=postgres_url,
