@@ -35,5 +35,5 @@ sleep 3
 sudo docker exec -it mypostgres psql -U postgres -d unica_db -c "CREATE TABLE course_tag_assignments (course_id INTEGER REFERENCES course(course_id), tag_id INTEGER REFERENCES course_tag(tag_id), PRIMARY KEY (course_id, tag_id));"
 sleep 3
 
-# Chạy container Spark với volume dữ liệu từ thư mục /home/ntd/spark_data
+# Chạy container Spark với volume dữ liệu từ thư mục /home/osboxes/spark_data
 sudo docker run -e Mongo_HOST=mymongodb --network mynetwork --name spark_container -v /home/osboxes/spark_data:/spark_data 3002tad/my_spark
