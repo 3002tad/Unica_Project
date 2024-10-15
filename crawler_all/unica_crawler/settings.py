@@ -9,10 +9,10 @@ NEWSPIDER_MODULE = "unica_crawler.spiders"
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 16
 
 # Configure a delay for requests for the same website (default: 0)
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 0.5
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
@@ -20,19 +20,8 @@ COOKIES_ENABLED = False
 # Disable Telnet Console (enabled by default)
 TELNETCONSOLE_ENABLED = False
 
-# Enable or disable spider middlewares
-#SPIDER_MIDDLEWARES = {
-#    "unica_crawler.middlewares.UnicaCrawlerSpiderMiddleware": 543,
-#}
-
-# Enable or disable downloader middlewares
-#DOWNLOADER_MIDDLEWARES = {
-#    "unica_crawler.middlewares.UnicaCrawlerDownloaderMiddleware": 543,
-#}
-
 # Configure item pipelines
 ITEM_PIPELINES = {
-    "unica_crawler.pipelines.MongoDBUnicaPipeline": 200,  # Pipeline lưu vào MongoDB
     "unica_crawler.pipelines.CSVUnicaPipeline": 300,      # Pipeline xuất ra CSV
 }
 
