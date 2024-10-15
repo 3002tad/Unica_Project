@@ -37,3 +37,8 @@ sleep 3
 
 # Chạy container Spark với volume dữ liệu từ thư mục /home/osboxes/spark_data
 sudo docker run -e Mongo_HOST=mymongodb --network mynetwork --name spark_container -v /home/osboxes/spark_data:/spark_data 3002tad/my_spark
+
+
+#dừng vào xoá
+sudo docker stop $(sudo docker ps -aq)
+sudo docker rm $(sudo docker ps -aq)
