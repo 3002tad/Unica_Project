@@ -2,15 +2,15 @@
 
 This repository contains a Docker-based ETL pipeline for Unica course data.
 
-## Project structure
+## Project Structure
 
 - `unica_crawler/`: Scrapy crawler and CSV export pipeline (`data_crawl.csv`).
-- `unica_data_testing/`: loads crawled CSV data into MongoDB.
+- `unica_data_testing/`: Loads crawled CSV data into MongoDB.
 - `my_spark/`: Spark job that reads from MongoDB, cleans/transforms data, and writes to PostgreSQL.
-- `postgresql_to_sqlserver/`: script to migrate PostgreSQL data to SQL Server.
-- `data/`: sample source data files.
-- `report/`: project report and design assets.
-- `docker_setup.sh` / `run_docker_command.cmd`: end-to-end environment bootstrap scripts.
+- `postgresql_to_sqlserver/`: Script to migrate PostgreSQL data to SQL Server.
+- `data/`: Sample source data files.
+- `report/`: Project report and design assets.
+- `docker_setup.sh` / `run_docker_command.cmd`: End-to-end environment bootstrap scripts.
 
 ## Prerequisites
 
